@@ -1,0 +1,39 @@
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming -- Event Handling </h3>
+		<hr/>
+		
+		Select Image  :  
+		<select id="branch"  onchange="fn_updateImage()">
+			<option value="hyderabad.jpg">Hyderabad</option>
+			<option value="Pune.jpg">Pune</option>
+			<option value="bangalore.jpg">Bangalore</option>
+            <option value="chennai.jpg">Chennai</option>
+		</select>
+		<br/><br/>
+		<img   src="hyderabad.jpg"  id="img1"  border="2"  width="450"  height="300"  />
+		
+ 
+	 
+		
+		<script>
+		
+			  //  value ---   input, select, textarea
+			  function fn_updateImage()
+			  {
+					var  selectObj  =  document.getElementById("branch");
+					var   imgObj =   document.getElementById("img1");
+					
+					imgObj.src =     selectObj.value;
+				 
+			  }
+			
+			 
+			 
+		</script>
+		
+	 
+		
+	</body>
+</html>
