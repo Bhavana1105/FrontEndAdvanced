@@ -1,0 +1,48 @@
+<html>
+    <head>
+ <style>
+    td{
+        border:2px solid gray;
+    }
+    </style>
+ 
+    </head>
+    <body>
+        <script>
+             var arr=[1,"HTML5",2,"CSS3",3,"jQuery",4,"Angular JS",5,"Bootstrap"];
+            function fn_display(){
+              var tableObj=document.getElementById("table1");
+              var tabledata=tableObj.getElementsByTagName("td");
+              for( var i=0;i<10;i++){
+                    tabledata[i].innerHTML=arr[i];
+            }
+            }
+        </script>
+        <h1>Operations on Arrays</h1>
+        <hr>
+        <input type="button" value="Show Data" onclick="fn_display()"></input>
+        <p id="para"></p>
+        <table style="border:2px solid gray; width:200px;height:400px;" id="table1"><br><br>
+            <tr >
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+           <tr>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+    </body>
+</html>

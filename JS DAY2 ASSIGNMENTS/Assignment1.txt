@@ -1,0 +1,19 @@
+ASSIGNMENT-1
+
+1)https://www.w3schools.com/js/js_popup.asp#:~:text=JavaScript%20Popup%20Boxes%201%20Alert%20Box%20An%20alert,entering%20a%20page.%20...%204%20Line%20Breaks%20
+2)BOM is a Browser Object Model, which is a window object supported by all browsers representing a browser window consisting of navigator, history, screen, location and document objects which are children of windows. BOM can function to check an event from windows with window.addEventListener and can perform manipulation using window.innerHeight and window.innerWidth.
+DOM is a collection of functions and attributes / data that we use to create JavaScript programs that we can call APIs (Application Programming Interface). DOM can be used in HTML, XM and SVG. DOM is not only used for JavaScript programming but can be used for other programming as well.
+
+
+https://medium.com/geekculture/difference-between-bom-and-dom-in-javascript-5c8317c5c1d2
+
+
+
+
+ASSIGMENT-2
+5)
+
+  1)push():https://www.w3schools.com/jsref/jsref_push.asp
+  2)pop():https://www.w3schools.com/jsref/jsref_pop.asp
+  3)splice():https://www.w3schools.blog/array-splice-javascript-js
+

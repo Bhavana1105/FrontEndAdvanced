@@ -1,0 +1,23 @@
+
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript Programming--Loops</h1>
+        <hr>
+        <input type="button" value="Get Data"  onclick="fn_display()"/> 
+        <p id="para" style="padding-top:10px;"></p>
+        <ul id="list"></ul>
+        <script>
+            function fn_display(){
+            var paraObj=document.getElementById("list");
+            var str="";
+            var i=1;
+            while(i<5){
+                str=str+"<li>Welcome to JavaScript-"+i+"</li>";
+               i++;
+            }
+            paraObj.innerHTML=str;
+        }
+        </script>
+    </body>
+</html>

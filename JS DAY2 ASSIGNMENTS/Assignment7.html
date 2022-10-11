@@ -1,0 +1,65 @@
+<html>
+    <head>
+ <style>
+    table{
+        border-collapse:collapse;
+        border-spacing:10px;
+    }
+   td{
+    padding-left:40px;
+   }
+    </style>
+ 
+    </head>
+    <body>
+        <script>
+             var arr=["HTML5","CSS3","jQuery","Angular JS","Bootstrap","HTML5","CSS3","jQuery","Angular JS","BootStrap","HTML5","CSS3","jQuery","Angular JS","Bootstrap"];
+            function fn_display(){
+              var tableObj=document.getElementById("table1");
+              var tabledata=tableObj.getElementsByTagName("td");
+              for( var i=0;i<16;i++){
+                    tabledata[i].innerHTML=arr[i];
+            }
+            }
+        </script>
+        <h1>Dynamic operations on Array in JS</h1>
+        <hr>
+        <input type="button" value="Show Data" onclick="fn_display()"></input>
+        <p id="para"></p>
+        <table style="border:2px solid blue; width:600px;height:400px; border-collapse:collapse; border-spacing:10px;" id="table1";><br><br>
+            <tr style="background: skyblue;height:40px;margin:5px;">
+                <th>Course</th>
+                <th>Course</th>
+                <th>Course</th>
+                <th>Course</th>
+            </tr>
+            <tr >
+                <td></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+
+            </tr>
+           <tr>
+                <td></td>
+                <td></td>
+                <td ></td>
+                <td ></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td ></td>
+                <td ></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td ></td>
+                <td ></td>
+
+            </tr>
+        </table>
+    </body>
+</html>
