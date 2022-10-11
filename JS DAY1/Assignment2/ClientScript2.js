@@ -1,0 +1,1 @@
+alert("ClientScript2.js");

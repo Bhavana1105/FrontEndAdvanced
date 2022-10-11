@@ -1,0 +1,70 @@
+ASSIGNMNET1
+1)different activities that we do using javascript in client side programming:
+  On the client-side, you can use JavaScript to add interactivity to web pages. There are a lot of fantastic animations you can create with JavaScript. All that matters is how you manipulate the HTML and CSS.
+
+  With pure JavaScript, also known as VanillaJS, you can do some fantastic animations. But, you can also make use of a library such as JQuery to make your work easier  
+
+  Some of the animations you can create using JavaScript are:
+
+         The smooth fading of a button
+         The figure-changing effect of count-down timers
+         The zooming animation when viewing images
+         The playing of media files such as audio or video
+         Custom animations of web page element
+
+2)JavaScriptCore is Apple's engine for its Safari browser.
+
+
+
+
+
+
+
+
+ASSIGNMENT-2
+1)YES,IT IS POSSIBLE.Press Ctrl + Shift + P (Windows, Linux) or Command + Shift + P (macOS) to open the Command Menu. Start typing javascript , select Disable JavaScript, and then press Enter to run the command. JavaScript is now disabled.
+2) If the variable name which is being accessed doesn’t exist in memory space then it would be not defined, and if exists in memory space but hasn’t been assigned any value till now, then it would be undefined.
+3)                 
+
+                       JAVA                                                                               JAVASCRIPT
+           Java is an object-oriented programming language.	                            JavaScript is an object-based scripting language.
+ Java applications can run in any virtual machine(JVM) or browser.	    JavaScript code used to run only in the browser, but now it can run on the server via Node.js.
+           Java is mainly used for backend                                           	Javascript is used for the frontend and backend both.
+              Java uses more memory                                                                     	Javascript uses less memory.
+
+
+
+
+4)JAVASCRIPT PRIMITIVE DATA TYPES
+        Data Type	                                                                         Description
+String	                                                                           represents sequence of characters e.g. "hello"
+Number	                                                                           represents numeric values e.g. 100
+Boolean	                                                                           represents boolean value either false or true
+undefined                                                                          represents undefined value
+Null	                                                                           represents null i.e. no value at all
+
+
+JAVASCIPT NON PRIMITIVE DATA TYPES
+Data Type	                                                                                   Description
+Object	                                                                   represents instance through which we can access members
+Array	                                                                         represents group of similar values
+RegExp	                                                                             represents regular expression
+
+
+
+
+
+
+
+
+
+
+ASSIGNMNET-3
+1)The ‘==’ operator tests for abstract equality i.e. it does the necessary type conversions before doing the equality comparison.
+But the ‘===’ operator tests for strict equality i.e it will not do the type conversion hence if the two values are not of the same type, when compared, it will return false.
+2)The isNaN() function is used to check whether a given value is an illegal number or not. It returns true if value is a NaN else returns false. It is different from the Number.isNaN() Method.
+3)Client-Side JavaScript (CSJS)
+- It is JavaScript that enables the enables web pages on browsers to run active online content.
+
+Server-Side JavaScript (SSJS)
+- It is JavaScript that enables back-end access to databases, file systems, and servers.
