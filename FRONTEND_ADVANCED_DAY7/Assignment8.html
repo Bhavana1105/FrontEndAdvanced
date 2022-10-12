@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+            #c1,#c2{
+                font-weight: bolder;
+                font-size:larger;
+                margin-top: 2px;
+                align:center;
+            }
+            #p1{
+                font-weight: bolder;
+                font-size:80px;
+                padding-left: 440px;
+                padding-top: 190px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p1">
+            <span id="s1">00</span>:
+            <span id="s2">00</span>:
+            <span id="s3">00</span>
+        </p>
+
+        <input style="margin-left:550px;"type="button"value="start"id="c1"/>
+        <input type="button"value="stop"id="c2"/>
+
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+        <script>
+             var temp;
+              $(document).ready(function()
+            {
+
+                var sec=0;
+                var min=0;
+                var hor=0;
+            
+                $("#c1").click(function(){
+                     var setTimer=setInterval(function(){
+                
+                        sec++;
+                        if(sec<10)
+                        {
+                            $("#s3").html("0"+sec);
+
+                        }
+                        else{
+                            $("#s3").html(sec);
+                        }
+                        if(sec==60){
+                            min++;
+                            if(min<10)
+                            {
+                                $("#s2").html("0"+min);
+                            }
+                            else{
+                                $("#s2").html(min);
+                            }
+                            sec=0;
+                        }
+                        if(min==60)
+                        {
+                            hor++;
+                            if(hor<10){
+                                $("$s1").html("0"+hor);
+
+                            }
+                            else{
+                                $("$s1").html(hor);
+                            }
+                            min=0;
+
+                        }
+
+                    },100);
+                temp=setTimer;
+                });
+                
+            });
+            $("#c2").click(function(){
+                console.log(temp);
+                clearInterval(temp);
+            });
+           
+        </script>
+    </body>
+</html>
+
