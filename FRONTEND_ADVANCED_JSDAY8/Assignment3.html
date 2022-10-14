@@ -1,0 +1,61 @@
+<html>
+    <head>
+   <style>
+    img{
+        border-radius:100%;
+        width:100px;
+        height:100px;
+        border:none;
+    }
+    table{
+        border:none;
+        
+    }
+    td{
+        width:150px;
+        height:150px;
+    }
+   </style>
+    </head>
+    <body>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+        <table  id="table1"  width="400px">
+            <tr>
+                <td><img class="imgodd" src=https://1.bp.blogspot.com/-Lq6BBDwV744/WpmGi_lM1RI/AAAAAAAAJQ8/o4s9oFnxyVIc1GioOmWhqnyE2ydadhKpQCLcBGAs/s1600/giraffe-running.jpg></td>
+                <td><img class="imgeven" src=https://www.treehugger.com/thmb/bMGTVoLbCjqcpd9q3YX8_XW9zZk=/2122x1412/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-185509882-12143e2d1e234440a5c602df9d072f61.jpg></td>
+                <td><img class="imgodd" src=https://www.denverpost.com/wp-content/uploads/2020/02/Rhino-Calf_5.jpg></td>
+                <td><img class="imgeven" src=https://th.bing.com/th/id/R.7dfce7f590441d474aa9002c9da3dc13?rik=AUoQ3IkBzYn69A&riu=http%3a%2f%2fcincinnatizoo.org%2fsystem%2fassets%2fuploads%2f2014%2f02%2fasian-elephant.jpg&ehk=%2fq4dCzmOjRLdrvEc83W%2ff5J%2bDij%2bB2SQ7LaMaIjwJss%3d&risl=&pid=ImgRaw&r=0></td>
+            </tr>
+            <tr>
+                <td><img class="imgeven" src=https://th.bing.com/th/id/R.d6d6a862c354e5648c9cb2822c562668?rik=xJ0WaGVA2o8QOA&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f26344-animals-teeth-Jaguar-jaguars.jpg&ehk=BLPkTbLJXy3E0t8UeiS9marsaws5tH61Ag173TB70Pw%3d&risl=&pid=ImgRaw&r=0></td>
+                <td><img class="imgodd" src=https://th.bing.com/th/id/R.94ee1ac894cf3d5a9ac83b357ee75bf5?rik=sMTd%2fqihMLl9nA&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f306596-animals-birds-hibou.jpg&ehk=KjGuVO%2b%2bVlx9m7KC5%2b%2ftgveFyUj%2fBNR1GVJiZ2Lq4o0%3d&risl=&pid=ImgRaw&r=0></td>
+                <td><img class="imgeven" src=https://www.hdnicewallpapers.com/Walls/Big/Monkey/Wild_Animal_Monkey_Wallpaper.jpg></td>
+                <td><img class="imgodd" src=https://wallup.net/wp-content/uploads/2016/01/144690-animals-birds-seagulls-baby_animals.jpg></td>
+            </tr>
+            <tr>
+                <td><img class="imgodd" src=https://th.bing.com/th/id/OIP.PV8ohmKofNgyAcsuygdVRAHaE6?pid=ImgDet&rs=1></td>
+                <td><img class="imgeven" src=https://th.bing.com/th/id/R.f38f29e677d8cd4ed2b90f36e43e1993?rik=%2fPUcAuNLOTckEA&riu=http%3a%2f%2fthemescompany.com%2fwp-content%2fuploads%2f2012%2f01%2fFunny-Animals-Wallpapers-10.jpg&ehk=CaILLz4RTt%2bxN1TWdqFUEpX2AYAfi0mkwF7OvO2Ox7Q%3d&risl=&pid=ImgRaw&r=0></td>
+                <td><img class="imgodd" src=https://wallup.net/wp-content/uploads/2016/01/306686-animals-happy.jpg></td>
+                <td><img class="imgeven" src=https://th.bing.com/th/id/OIP.Fb4JhrI1ECQ4qXCxIJfuZAHaEo?pid=ImgDet&rs=1></td>
+            </tr>
+            <tr>
+                <td><img class="imgeven" src=https://th.bing.com/th/id/OIP.-v539vvdmhzO3ad-S_V7qgHaE8?pid=ImgDet&rs=1></td>
+                <td><img class="imgodd" src=https://th.bing.com/th/id/OIP.rcJmw7lS-cc__8ZrhiikfwHaFj?pid=ImgDet&rs=1></td>
+                <td><img class="imgeven" src=https://th.bing.com/th/id/OIP.7-jemxVMj8sgM0na6OMLBAHaFj?pid=ImgDet&rs=1></td>
+                <td><img class="imgodd" src=https://th.bing.com/th/id/OIP.Ovr6FdEFspYJv4NPAc1iSAHaE8?pid=ImgDet&w=800&h=534&rs=1></td>
+            </tr>
+        </table>
+     <script>
+		$(document).ready(function()
+		{
+                setInterval(function(){
+                    $(".imgodd").toggle(2000);
+                    setTimeout(function(){
+                    $(".imgeven").toggle(2000);
+                    },2000);
+                },2000);	
+		});
+        </script>
+    </body>
+</html>
