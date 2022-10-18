@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Enter Product Details</h1>
+        choose Your Product:
+        <select name="product" id="product">
+            <option id="4650">Skmei military Watch</option>
+            <option id="1250">Casado 209-Grey</option>
+            <option id="2650">Fogg 2038-BL</option>
+            <option id="3650">Lis Caron 8049</option>
+        </select><br><br>
+       Quantity: <input type="text"  id="qtntity"><br><br>
+        Amount: <input type="text" readonly name="amount" id="amount"><br><br>
+        <input type="button" value="Calculate Amount" id="cal" onclick="fn_calAmount()">
+        <input type="button" value="Get Data" id="data" >
+        <hr>
+        <br>
+        <table id="table1" style="width:600px;">
+            <tr>
+           <th>ProductName</th>
+           <th>Quantity</th>
+           <th>Amount</th>
+           </tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            function fn_calAmount(){
+           var id = $("#product option:selected").attr("id");
+           var name = $("#product option:selected").val();
+            //console.log(id);
+            //console.log(name);
+           var price=parseInt(id);
+           //console.log(price);
+          var quantity=$("#qtntity").val();
+        //console.log(quantity);
+        let res=parseInt(price)*parseInt(quantity);
+       // console.log(res);
+        $("#amount").val(res);
+        let  str  = "<tr ><td>"+name+"</td><td>"+  quantity+"</td><td>"+  res+"</td>  </tr>";	
+        $("#data").click(function()  
+				{ 
+                    //console.log(str);
+				$("#table1").append(str);
+                str="";						
+				});	
+            }
+        </script>
+    </body>
+</html>
