@@ -1,0 +1,80 @@
+<!-- Create HTML Page to display Hello World message by using jQuery -->
+<html>
+ <head> 
+ </head>
+ <body>
+	<h3> jQuery Programming  </h3>
+	<hr />		
+	Person Name  :  <input type="text"  id="t1" />  
+	<br/><br/>
+	Contact Number  :  <input type="text"  id="t2" />  
+	<br/><br/>
+    Vehicle number  :  <input type="text"  id="t3" />  
+    <br><br>
+    City Name:<input type="text" id="t4"/>
+    <br><br>
+	
+  
+	
+	<script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+	<script>
+$(document).ready(function(){ 
+	
+			 $('#t1').keyup(function() {
+			 
+						$(".error-t1").remove();						
+						var inputVal = $(this).val();						
+                        var alpharegex =/^[a-zA-z ]{0,10}$/;
+			//				alert(  numericReg.test( inputVal )  );
+			//  			test()  method returns true or false
+							if(  alpharegex.test(inputVal)  ==  false  &&  inputVal.length >  0 ) 
+							{
+								$(this).after('<span  class="error-t1">Only 10 Aphabets allowed</span>');
+							}		 
+			});
+		 $('#t2').keyup(function() {
+			 
+						$(".error-t2").remove();						
+						var inputVal = $(this).val();						
+						var numReg = /^[0-9]{10}$/;
+						 		
+							if(  numReg.test(inputVal)  ==  false && inputVal.length>0) 
+							{
+								$(this).after('<span  class="error-t2">Enter Valid contact number</span>');
+							}
+						 
+			});
+              
+ });
+ $('#t3').keyup(function() {
+			 
+             $(".error-t3").remove();						
+             var inputVal = $(this).val();						
+             var numReg = /^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$/;
+                      
+                 if(  numReg.test(inputVal)  ==  false && inputVal.length>0) 
+                 {
+                     $(this).after('<span  class="error-t3">Enter Valid contact number</span>');
+                 }
+              
+ });
+            $('#t4').keyup(function() {
+			 
+             $(".error-t4").remove();						
+             var inputVal = $(this).val();						
+             var numReg = /^[A-Z ]+$/;
+                      
+                 if(  numReg.test(inputVal)  ==  false && inputVal.length>0) 
+                 {
+                     $(this).after('<span  class="error-t4">Enter only capital lettrs</span>');
+                 }
+              
+ });
+			
+</script>
+	
+ </body>
+</html>
+
+ 

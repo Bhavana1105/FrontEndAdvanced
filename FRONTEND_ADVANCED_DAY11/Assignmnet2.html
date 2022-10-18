@@ -1,0 +1,71 @@
+<html>
+    <head>
+    <style>
+        table{
+            border:2px solid gray;
+        }
+        td{
+            border:2px solid gray;
+        }
+    </style>
+    </head>
+    <body>
+        <input type="button" value="ShowData" id="data">
+        <br>
+        <br>
+        <table id="table1" style="width:600px;">
+            <tr>
+                <td >Credit Card Number :</td>
+                <td id="card_num"></td>
+            </tr>
+            <tr>
+                <td>Card Holder Name :</td>
+                <td id="holder_name"></td>
+            </tr>
+            <tr>
+                <td>Card Type :</td>
+                <td id="card_type"></td>
+            </tr>
+            <tr>
+                <td>Expiry Date :</td>
+                <td id="expiry_date"></td>
+            </tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                //alert("hi");
+                $("#data").click(function(){
+
+            var custObj={cardNumber:1234456778997896 ,chName:"bhavana Sruthi",cardType:"Visa",expireMonth:12,expireYear:2023};
+            console.log(custObj);
+            var tableObj=document.getElementById("table1");
+        console.log( custObj.cardNumber);
+       cardNum=custObj.cardNumber.toString();					
+	    $("#card_num").html ("****_****_****"+cardNum.slice(12));
+        $("#holder_name").html(custObj.chName[0].toUpperCase()+custObj.chName.slice(1).toLowerCase());
+        $("#card_type").html( custObj.cardType.toUpperCase());
+        $("#expiry_date").html(getMonthName(custObj.expireMonth) + " " +custObj.expireYear);
+ });
+    
+    });
+    function getMonthName(monthNumber) {
+  const date = new Date();
+  date.setMonth(monthNumber - 1);
+
+  return date.toLocaleString('en-US', { month: 'long' });
+}
+
+ /* function getMonth(monthNumber){
+var month = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+var selectedMonthName = month[monthNumber-1];
+//alert(selectedMonthName);
+ return selectedMonthName;
+  }*/
+            
+        </script>
+    </body>
+</html>

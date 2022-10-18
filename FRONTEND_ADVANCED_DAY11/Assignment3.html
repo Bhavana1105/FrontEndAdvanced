@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+	<h3> jQuery  -  Getting remote data  from  Server </h3>
+	<hr />
+ 
+	<button  id="b1">Get Server Data</button>
+	<button  id="b2">Send Data to Server </button>
+	<hr/>
+    <br><br>
+    <form action="action.php">
+      Employee Number:  <input type="text" id="empno">
+      Employee Name:  <input type="text" id="ename">
+      Department Number:  <input type="text" id="deptno">
+      <select  id="job">
+       <option value="consulting">Consulting</option>
+       <option value="tax">Tax</option>
+       <option value="Audit">Audit</option>
+       <option value="Enabling Areas">Enabling Areas</option>
+      </select>
+    </form>
+    <hr>
+    <br><br>
+	<table  id="table1"  border="1"  cellpadding="5"  cellspacing="0"  width="600">
+		<tr>
+			<th>Employee Number</th>
+			<th>Employee Name</th>
+			<th>Job</th>
+            <th>Department Number</th>
+		</tr>	
+	</table>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+	</script>
+
+<script>
+			$(document).ready(function(){
+			
+				  $("#b1").click(function(){				  
+							  $.ajax(
+								{
+									url : "http://localhost:3000/EmpData",
+									type: "GET",
+									success :  function(response)
+									{
+										console.log(response);	
+									    displayData(response );
+									}		
+								});				 
+				});
+			
+			  $("#b2").click(function(){		
+
+					// 		var  newCustomerObj = {Name: 'Ravi Kiran', City: 'Pune', Country: 'India'};		
+							var  newCustomerObj = {};
+							newCustomerObj.Empno =   $("#empno").val();
+							newCustomerObj.Ename  =      $("#ename").val();
+							newCustomerObj.Deptno =      $("#deptno").val()
+							newCustomerObj.Job =      $("#job").val()
+
+							   $.ajax(
+								{
+									url : "http://localhost:3000/EmpData",
+									type: "POST",
+									data :   newCustomerObj,
+									success :  function(response)
+									{
+										console.log(response);	
+									    alert("New Customer Details are saved in server");
+									}
+									/* let str1  = `<tr>  <td> ${newCustomerObj.Empno} </td>  <td>${newCustomerObj.Ename}</td>  <td>${newCustomerObj.Job}</td><td>${newCustomerObj.Deptno}</td>  </tr>`;				
+						          $("#table1").append(str);*/		
+								});	
+							});		 
+				});
+ 
+			
+			
+			function   displayData(resData)
+			{
+				//	console.log(resData);
+				// Clear table except header row (first row)
+			//	$("#table1  td").parent().remove();
+			//	$("#table1").find("tr:gt(0)").remove();
+			//	$("#table1   tr:not(:first)").remove();
+				$("#table1   tr").not(":first").remove();					
+				for(let  item  of  resData)
+				{
+						let  str  = `<tr>  <td> ${item.Empno} </td>  <td>${item.Ename}</td>  <td>${item.Job}</td><td>${item.Deptno}</td>  </tr>`;				
+						$("#table1").append(str);		
+				}	
+			//  $("#table1  tr:even").css("background-color",  "Pink");
+			//  $("#table1  tr:odd").css("background-color",  "lightblue");
+			 
+			//  $("#table1  tr:first").css("background-color",  "lightgreen");
+			}
+			
+			
+
+</script>
+
+</body>
+</html>
