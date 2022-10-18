@@ -1,0 +1,43 @@
+1)Different types of selectors:
+  Universal selectors
+  Element Seleectors
+  Class Seleectors
+  ID Selectors
+  Attribute Selectors
+  Group selectors
+  Compound Selectors
+  Descendant Selectors
+  Parent-child Selectors
+  General sibling selectors
+  Adjacent sibling selectors
+  Pseudo class Selectors
+  Pseudo Element selectors
+
+
+
+2)CDN:
+A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+
+A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos. 
+
+
+3)this and $(this) refers to the same element. The only difference is the way they are used. 'this' is used in traditional sense, when 'this' is wrapped in $() then it becomes a jQuery object and you are able to use the power of jQuery.
+$(this) is a jQuery object and you can use the power and beauty of jQuery, but with 'this' keyword, one need to use native JavaScript.
+
+
+4)A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you. Code included inside $( document ).ready() will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute. Code included inside $( window ).on( "load", function() { ... }) will run once the entire page (images or iframes), not just the DOM, is ready.
+
+6)attaching one time events in jQuery:
+
+The one() method attaches one or more event handlers for the selected elements, and specifies a function to run when the event occurs.
+
+When using the one() method, the event handler function is only run ONCE for each element.
+Syntax
+$(selector).one(event,data,function)
+https://www.w3schools.com/jquery/event_one.asp#:~:text=The%20one()%20method%20attaches,run%20ONCE%20for%20each%20element.
+
+7)https://api.jquery.com/text-selector/#:~:text=%24(%20%22%3Atext%22%20)%20allows,%22*%22%20)%20is%20implied.
+$( ":text" ) allows us to select all <input type="text"> elements. As with other pseudo-class selectors (those that begin with a ":") it is recommended to precede it with a tag name or some other selector; otherwise, the universal selector ( "*" ) is implied. 
+
+
+

@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Enter Product Details</h1>
+        choose Your Product:
+        <select name="product" id="product">
+            <option id="4650">Skmei military Watch-  Rs.4650</option>
+            <option id="1250">Casado 209-Grey-  Rs.1250</option>
+            <option id="2650">Fogg 2038-BL-  Rs2650</option>
+            <option id="3650">Lis Caron 8049-  Rs.3650</option>
+        </select><br><br>
+       Quantity: <input type="text"  id="qtntity"><br><br>
+        Amount: <input type="text" readonly name="amount" id="amount"><br><br>
+        <input type="button" value="Calculate Amount" id="cal" onclick="fn_calAmount()">
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            function fn_calAmount(){
+var id = $("#product option:selected").attr("id");
+var price=parseInt(id);
+console.log(price);
+                var quantity=$("#qtntity").val();
+                console.log(quantity);
+                let res=parseInt(price)*parseInt(quantity);
+                console.log(res);
+                $("#amount").val(res);
+            }
+        </script>
+    </body>
+</html>
