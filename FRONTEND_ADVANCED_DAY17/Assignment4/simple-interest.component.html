@@ -1,0 +1,14 @@
+<h3>Calculate SimpleInterest</h3>
+<fieldset>
+    Principle Amount:
+    <input type="number" [(ngModel)]="amount">
+    <br><br>
+    Interest Rate:
+    <input type="number" [(ngModel)]="interest">
+    <br><br>
+    TimePeriod(in years):
+    <input type="number" [(ngModel)]="timePeriod">
+    <br><br>
+<input type="button" value="Calculate SI" (click)="calSI()">
+</fieldset>
+<p>Simple Interest:{{result}}</p>

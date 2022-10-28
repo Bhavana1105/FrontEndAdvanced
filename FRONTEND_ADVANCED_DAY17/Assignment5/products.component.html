@@ -1,0 +1,52 @@
+<style>
+    div{
+        float:left;
+    }
+   .section{
+      width:200px;
+      margin-right:20px;
+      background-color:bisque;
+      padding:10px;
+      text-align:center;
+    }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <h3>PRODUCT DATA</h3>
+Id:
+<input type="number" [(ngModel)]="id">
+<br><br>
+Name:
+<input type="text" [(ngModel)]="name">
+<br><br>
+Price:
+<input type="number" [(ngModel)]="price">
+<br><br>
+Category:
+<input type="text" [(ngModel)]="category">
+<br><br>
+Quantity:
+<input type="number" [(ngModel)]="quantity">
+<br><br>
+<input type="button" value="Get product" (click)="getProducts()">
+<input type="button" value="Add Product" (click)="addProducts()">
+<input type="button" value="Update Product" (click)="updateProduct()">
+<input type="button" value="Reset" (click)="reset()">
+<br><br>
+        <div   *ngFor="let item of productArray">
+            <div  id="main" class="section">
+                 <p>Product Id:{{item.id}}</p>
+        <p>Name: {{item.name}}</p>
+        <p>Price:{{item.price}}</p>
+        <p>Category:{{item.category}}</p>
+        <p>Quantity:{{item.quantity}}</p>
+            <a class="bi bi-pencil square" (click)="selectProduct( item.id )">Edit</a>   
+            <a class="bi bi-trash" (click)="deleteProduct( item.id)">Delete</a>   
+            </div>
+            </div>
+
+    
+    
+
+
+
+
