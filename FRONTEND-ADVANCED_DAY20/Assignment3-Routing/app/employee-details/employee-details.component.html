@@ -1,0 +1,19 @@
+<input type="button" value="Get Data" (click)="Get_Data()">
+
+<table style="border:2px solid black" width="600" >
+    <tr>
+     <th>Employee Number</th>
+     <th>Employee Name</th>
+     <th>Job</th>
+     <th>Department Number</th>
+
+    </tr>
+     <tr  *ngFor="let item of result">
+         <td>{{item.Empno}}</td>
+         <td>{{item.Ename}}</td>
+         <td>{{item.Job}}</td>
+         <td>{{item.Deptno}}</td>
+         <a  href="javascript:void(0);" [routerLink]="['/Details', item.Empno]">View Details</a>
+
+     </tr>
+ </table>
