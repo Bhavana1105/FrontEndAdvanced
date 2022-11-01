@@ -1,0 +1,36 @@
+<p>user-component works!</p>
+<input type="button" value="Get Data" (click)="Get_Data()">
+<input type="button" value="Customer Data" (click)="cust_Data()">
+
+<p>{{data|json}}</p>
+<p>{{result|json}}</p>
+<table style="border:2px solid black" width="600" >
+    <tr>
+     <th>Id</th>
+     <th>Email</th>
+     <th>First Name</th>
+     <th>Last Name</th>
+
+    </tr>
+     <tr  *ngFor="let item of result">
+         <td>{{item.id}}</td>
+         <td>{{item.email}}</td>
+         <td>{{item.first_name}}</td>
+         <td>{{item.last_name}}</td>
+
+     </tr>
+ </table>
+ <table style="border:2px solid black" width="600" >
+    <tr>
+     <th>Name</th>
+     <th>City</th>
+     <th>Country</th>
+    </tr>
+     <tr  *ngFor="let item of data">
+         <td>{{item.Name}}</td>
+         <td>{{item.City}}</td>
+         <td>{{item.Country}}</td>
+
+     </tr>
+ </table>
+

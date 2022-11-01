@@ -1,0 +1,23 @@
+ 
+<h3> Working with Angular Services  </h3>
+<hr/>
+ 
+
+<input type="button" value="Get Data"  (click)="button1Click()"  />
+<br/><br/>
+ <table border="2">
+  <tr>
+    <th>User Id</th>
+    <th>First Name</th>
+    <th>Last Name</th>     
+    <th>Email Id</th>
+  </tr>
+  <tr *ngFor="let item of usersArray">
+    <td>{{item.id}}</td>
+    <td>{{item.first_name}}</td>
+    <td>{{item.last_name}}</td>
+    <td>{{item.email}}</td>
+  </tr>
+ </table>
+ 
+ 
